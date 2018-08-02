@@ -1,0 +1,25 @@
+body {
+    background-color: skyblue;
+}
+
+button{
+    border: none;
+    background-color: navy;
+    color: white;
+    margin-right: .3rem;
+    outline: none;
+}
+
+#viewer{
+    width: 200px;
+    height: 20px;
+    border:1px solid navy;
+    margin-bottom: .3em;
+    position: relative;
+    .progress{
+        height: 100%;
+        width: 0%;
+        background-color: dodgerblue;
+        position: absolute;
+    }
+}

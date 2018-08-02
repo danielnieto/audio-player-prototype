@@ -1,3 +1,4 @@
 require("./widget");
+require("../css/styles.scss");
 
-new NeonWidget().render(document.body);
+new AudioPlayer().render(document.body);
