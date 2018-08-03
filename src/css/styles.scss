@@ -23,3 +23,19 @@ button{
         position: absolute;
     }
 }
+
+#waveform{
+    .waveform-container {
+        max-width: 100%;
+        width: 800px;
+        height: 100px;
+    }
+    .waveform-bg {
+        clip-path: url("#waveform-mask");
+        fill: lightgray;
+    }
+    .waveform-progress {
+        clip-path: url("#waveform-mask");
+        fill: #44bc75;
+    }
+}
