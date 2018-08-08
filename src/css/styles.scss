@@ -1,5 +1,5 @@
 body {
-    background-color: skyblue;
+    background-color: white;
 }
 
 button{
@@ -10,32 +10,7 @@ button{
     outline: none;
 }
 
-#viewer{
-    width: 200px;
-    height: 20px;
-    border:1px solid navy;
-    margin-bottom: .3em;
-    position: relative;
-    .progress{
-        height: 100%;
-        width: 0%;
-        background-color: dodgerblue;
-        position: absolute;
-    }
+#waveform-container{
+    margin-bottom: .2rem;
 }
 
-#waveform{
-    .waveform-container {
-        max-width: 100%;
-        width: 800px;
-        height: 100px;
-    }
-    .waveform-bg {
-        clip-path: url("#waveform-mask");
-        fill: lightgray;
-    }
-    .waveform-progress {
-        clip-path: url("#waveform-mask");
-        fill: #44bc75;
-    }
-}

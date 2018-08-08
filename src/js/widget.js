@@ -12,7 +12,7 @@ Class("AudioPlayer").inherits(Widget)({
 
             var player = this;
 
-            player.$progress = $("#viewer .progress");
+            var SVG = "https://uploads.codesandbox.io/uploads/user/a6f59428-f0d7-41bd-8f8d-53d125d25caf/DaFz-waveform-110.svg";
 
             player.audio = new Audio(
                 "http://www.noiseaddicts.com/samples_1w72b820/2541.mp3"
@@ -41,17 +41,14 @@ Class("AudioPlayer").inherits(Widget)({
                     player.audio.pause();
                 });
 
-            player.$waveformProgress = $('#waveform-progress');
+            var $waveformContainer = $("#waveform-container");
 
-            var $waveformContainer = $(".waveform-container");
+            $waveformContainer.load(SVG, function (response, status, xhr){
+                if(status === "success"){
+                    player.$progress = $waveformContainer.find("#progress");
+                }
+            });
 
-            $.get("https://uploads.codesandbox.io/uploads/user/a6f59428-f0d7-41bd-8f8d-53d125d25caf/NCU7-waveform.svg", function (svgData) {
-                console.log(svgData);
-                var $svgMask = $(svgData);
-
-                $svgMask.insertAfter($waveformContainer);
-
-            }, "text");
         },
         updateProgress: function updateProgress(){
             var player = this;
@@ -59,9 +56,7 @@ Class("AudioPlayer").inherits(Widget)({
             player.progress = (player.currentTime * 100) / player.duration;
 
             player.$progress.css("width", player.progress + "%");
-            player.$waveformProgress.css("width", player.progress + "%");
 
-            console.log(player.progress);
         }
     }
 });
