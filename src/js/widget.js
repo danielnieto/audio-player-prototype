@@ -12,7 +12,7 @@ Class("AudioPlayer").inherits(Widget)({
 
             var player = this;
 
-            var SVG = "https://uploads.codesandbox.io/uploads/user/a6f59428-f0d7-41bd-8f8d-53d125d25caf/DaFz-waveform-110.svg";
+            var SVG = "https://uploads.codesandbox.io/uploads/user/a6f59428-f0d7-41bd-8f8d-53d125d25caf/1rRp-waveform-100.svg";
 
             player.audio = new Audio(
                 "http://www.noiseaddicts.com/samples_1w72b820/2541.mp3"
